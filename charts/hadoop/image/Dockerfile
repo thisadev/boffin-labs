@@ -12,7 +12,7 @@ ENV HADOOP_COMMON_HOME=${HADOOP_HOME} \
 
 RUN curl --silent --output /tmp/hadoop.tgz https://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/hadoop/common/hadoop-${HADOOP_VERSION}/hadoop-${HADOOP_VERSION}.tar.gz && tar --directory /opt -xzf /tmp/hadoop.tgz && rm /tmp/hadoop.tgz
 RUN ln -s /opt/hadoop-${HADOOP_VERSION} ${HADOOP_HOME}
-
+RUN apt update && apt install python3-distutils -y
 WORKDIR $HADOOP_HOME
 
 # Hdfs ports
