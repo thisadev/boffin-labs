@@ -11,6 +11,6 @@ maintainers:
   url: http://github.com/thisadev
 name: hadoop
 sources:
-- https://github.com/pfisterer/apache-hadoop-helm
+- https://thisadev.github.io/boffin-labs/
 - https://github.com/apache/hadoop
 version: 1.0.1
