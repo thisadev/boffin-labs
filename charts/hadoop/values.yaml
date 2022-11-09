@@ -1,5 +1,5 @@
 image:
-  repository: farberg/apache-hadoop
+  repository: thisa08/hadoop
   tag: 3.3.4
   pullPolicy: Always
 
