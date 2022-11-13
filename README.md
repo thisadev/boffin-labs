@@ -43,3 +43,36 @@ Search for the hadoop chart in the repo using;
   <td>The Apache Hadoop software library is a framewo...</td>
 </tr>
 </table>
+
+Install hadoop chart in kubernetes using helm.
+
+<pre><code> helm install <release-name> boffin-labs/hadoop </code></pre>
+
+## Install Hive 3.1.3 Chart
+
+Search for the hive chart in the repo using;
+
+<pre><code> helm search repo hive </code></pre>
+
+<table>
+<tr>
+  <th>NAME</th>
+  <th>CHART VERSION</th>
+  <th>APP VERSION</th>
+  <th>DESCRIPTION</th>
+</tr>
+<tr>
+  <td>boffin-labs/hive</td>
+  <td>1.0.1</td>
+  <td>3.1.3</td>
+  <td>The Apache Hive ™ data warehouse software facil...</td>
+</tr>
+</table>
+
+Install hadoop chart in kubernetes using helm.
+
+<pre><code> helm install <release-name> boffin-labs/hive </code></pre>
+
+
+
+
