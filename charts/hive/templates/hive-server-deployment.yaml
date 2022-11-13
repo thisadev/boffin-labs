@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: hive-server
+  name: hive-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: hive-server
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c
+        kompose.version: 1.26.1 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: hive-server
+    spec:
+      containers:
+        - image: thisa08/hive:3.1.3
+          name: hive-server
+          ports:
+            - containerPort: 9083
+          resources: {}
+      restartPolicy: Always
+status: {}
