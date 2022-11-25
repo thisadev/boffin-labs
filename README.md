@@ -46,7 +46,7 @@ Search for the hadoop chart in the repo using;
 
 Install hadoop chart in kubernetes using helm.
 
-<pre><code> helm install <release-name> boffin-labs/hadoop </code></pre>
+<pre><code> helm install release-name boffin-labs/hadoop </code></pre>
 
 ## Install Hive 3.1.3 Chart
 
@@ -71,7 +71,7 @@ Search for the hive chart in the repo using;
 
 Install hadoop chart in kubernetes using helm.
 
-<pre><code> helm install <release-name> boffin-labs/hive </code></pre>
+<pre><code> helm install release-name boffin-labs/hive </code></pre>
 
 
 
