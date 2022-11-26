@@ -3,7 +3,7 @@ entries:
   hadoop:
   - apiVersion: v1
     appVersion: 3.3.4
-    created: "2022-11-26T23:47:17.577593+05:30"
+    created: "2022-11-27T00:12:10.121355+05:30"
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -24,7 +24,7 @@ entries:
   hive:
   - apiVersion: v1
     appVersion: 3.1.3
-    created: "2022-11-26T23:47:17.578125+05:30"
+    created: "2022-11-27T00:12:10.122155+05:30"
     description: The Apache Hive ™ data warehouse software facilitates reading, writing,
       and managing large datasets residing in distributed storage using SQL. Structure
       can be projected onto data already in storage. A command line tool and JDBC
@@ -46,13 +46,13 @@ entries:
   zeppelin:
   - apiVersion: v2
     appVersion: 0.10.1
-    created: "2022-11-26T23:47:17.580047+05:30"
+    created: "2022-11-27T00:12:10.123891+05:30"
     description: Web-based notebook that enables data-driven, interactive data analytics
       and collaborative documents with SQL, Scala, Python, R and more.
-    digest: 4c8e59d040af4c9667a456a0e7923911fd3e8f1de8ff0ac0bfdaf31870bf78ee
+    digest: fd8bca26b28ca54c5876ba0e693198cfb747b35a406147e1b13e8f6bf0dfbd7e
     name: zeppelin
     type: application
     urls:
     - https://thisadev.github.io/boffin-labs/zeppelin-0.1.0.tgz
     version: 0.1.0
-generated: "2022-11-26T23:47:17.575952+05:30"
+generated: "2022-11-27T00:12:10.115851+05:30"
