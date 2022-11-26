@@ -85,8 +85,6 @@ COPY log4j2_docker.properties ${ZEPPELIN_HOME}/conf/
 COPY shiro.ini ${ZEPPELIN_HOME}/conf/
 COPY zeppelin-site.xml ${ZEPPELIN_HOME}/conf/
 
-USER 1000
-
 EXPOSE 8080
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
