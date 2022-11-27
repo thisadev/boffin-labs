@@ -11,8 +11,8 @@ image:
   tag: "0.10.1"
 
 imagePullSecrets: []
-nameOverride: "zeppelin"
-fullnameOverride: "zeppelin"
+nameOverride: "zeppelin-ui"
+fullnameOverride: "zeppelin-ui"
 
 serviceAccount:
   # Specifies whether a service account should be created
