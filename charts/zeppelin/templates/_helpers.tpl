@@ -1,3 +1,4 @@
+{{/* vim: set filetype=mustache: */}}
 {{/*
 Expand the name of the chart.
 */}}
@@ -58,5 +59,41 @@ Create the name of the service account to use
 {{- default (include "zeppelin.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
+
+{{/*
+Create the name of the role name to use
+*/}}
+{{- define "zeppelin.roleName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "zeppelin.fullname" .) .Values.serviceAccount.name }}-role
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}-role
+{{- end }}
+{{- end }}
+
+{{/*
+Create the name of the role binding name to use
+*/}}
+{{- define "zeppelin.roleBindingName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "zeppelin.fullname" .) .Values.serviceAccount.name }}-role-binding
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}-role-binding
+{{- end }}
+{{- end }}
+
+{{/*
+'serviceDomain' is a Domain name to use for accessing Zeppelin UI.
+Should point IP address of 'zeppelin-server' service.
+*/}}
+{{- define "zeppelin.serviceDomain" -}}
+{{- if .Values.ingress.enabled }}
+{{- with (first .Values.ingress.hosts) }}
+{{- .host }}
+{{- end }}
+{{- else }}
+{{- default .Values.env.SERVICE_DOMAIN (include "zeppelin.fullname" .) }}
 {{- end }}
 {{- end }}
