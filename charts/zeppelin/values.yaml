@@ -11,8 +11,8 @@ image:
   tag: "0.10.1"
 
 imagePullSecrets: []
-nameOverride: "zeppelin"
-fullnameOverride: "zeppelin"
+nameOverride: ""
+fullnameOverride: ""
 
 env:
   # 'serviceDomain' is a Domain name to use for accessing Zeppelin UI.
@@ -40,7 +40,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: "zeppelin-svc"
+  name: ""
 
 podAnnotations: {}
 
