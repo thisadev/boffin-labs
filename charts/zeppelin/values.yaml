@@ -1,14 +1,9 @@
-# Default values for zeppelin.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 replicaCount: 1
 
 image:
   repository: thisa08/zeppelin
+  tag: 0.10.1
   pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.10.1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -18,6 +13,7 @@ env:
   # 'serviceDomain' is a Domain name to use for accessing Zeppelin UI.
   # Should point IP address of 'zeppelin-server' service.
   #
+
   # Wildcard subdomain need to be point the same IP address to access service inside of Pod (such as SparkUI).
   # i.e. if service domain is 'local.zeppelin-project.org', DNS configuration should make 'local.zeppelin-project.org' and '*.local.zeppelin-project.org' point the same address.
   #
@@ -46,52 +42,3 @@ podAnnotations: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
-
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
-
-service:
-  type: LoadBalancer
-  port: 80
-
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
-
-resources: {}
-  #requests:
-  #  memory: "256Mi"
-  #  cpu: "200m"
-  #limits:
-  #  memory: "2048Mi"
-  #  cpu: "1000m"
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
