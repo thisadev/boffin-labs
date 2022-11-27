@@ -1,7 +1,7 @@
 # boffin-labs
 A Sandbox environment to test Hadoop, Spark and Hive with Jupyter Hub
 
-- Hadoop 3.3.4 
+- Hadoop 3.3.4
 - Hive 3.1.3
 
 ## Add helm repo
@@ -73,6 +73,27 @@ Install hadoop chart in kubernetes using helm.
 
 <pre><code> helm install release-name boffin-labs/hive </code></pre>
 
+## Install Zeppelin Notebook 0.10.1 Chart
 
+Search for the hive chart in the repo using;
 
+<pre><code> helm search repo zeppelin </code></pre>
 
+<table>
+<tr>
+  <th>NAME</th>
+  <th>CHART VERSION</th>
+  <th>APP VERSION</th>
+  <th>DESCRIPTION</th>
+</tr>
+<tr>
+  <td>boffin-labs/zeppelin</td>
+  <td>0.1.0</td>
+  <td>0.10.1</td>
+  <td>Web-based notebook that enables data-driven, in...</td>
+</tr>
+</table>
+
+Install hadoop chart in kubernetes using helm.
+
+<pre><code> helm install release-name boffin-labs/zeppelin </code></pre>
