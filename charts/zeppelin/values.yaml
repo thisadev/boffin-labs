@@ -11,8 +11,8 @@ image:
   tag: "0.10.1"
 
 imagePullSecrets: []
-nameOverride: "zeppelin-ui"
-fullnameOverride: "zeppelin-ui"
+nameOverride: "zeppelin"
+fullnameOverride: "zeppelin"
 
 env:
   # 'serviceDomain' is a Domain name to use for accessing Zeppelin UI.
