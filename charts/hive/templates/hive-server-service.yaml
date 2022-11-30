@@ -13,6 +13,9 @@ spec:
     - name: "9083"
       port: 9083
       targetPort: 9083
+    - name: "10000"
+      port: 10000
+      targetPort: 10000  
   selector:
     io.kompose.service: hive-server
 status:
