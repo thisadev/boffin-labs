@@ -28,7 +28,6 @@ spec:
           name: hive-server
           ports:
             - containerPort: 9083
-            - containerPort: 10000
           resources: {}
       restartPolicy: Always
 status: {}
