@@ -26,7 +26,7 @@ hdfs:
     # Will be used as dfs.datanode.hostname
     # You still need to set up services + ingress for every DN
     # Datanodes will expect to
-    externalHostname: hdfs-hadoop-hdfs-dn
+    externalHostname: hadoop-hadoop-hdfs-dn
     externalDataPortRangeStart: 50500
     externalHTTPPortRangeStart: 51000
 
