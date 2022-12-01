@@ -1,0 +1,9 @@
+1306421,Colombo
+15900065,Kandy
+12708937,Matara
+3601530,Colombo
+1306894,Colombo
+1003461,Kandy
+17302664,Matara
+1004775,Jaffna
+5000088,Colombo
