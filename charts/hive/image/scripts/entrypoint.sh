@@ -16,3 +16,4 @@ fi
 set -e
 
 /opt/apache-hive-3.1.3-bin/bin/hive --service metastore -verbose
+/opt/apache-hive-3.1.3-bin/bin/hiveserver2 &
