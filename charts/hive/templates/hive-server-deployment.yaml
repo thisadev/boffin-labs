@@ -42,7 +42,7 @@ spec:
                 echo "ERROR: Could not find $f in /tmp/hadoop-config"
                 exit 1
               fi
-            done"
+              done"
           volumes:
             - name: hadoop-config
               configMap:
