@@ -36,7 +36,8 @@ spec:
               readOnly: true
           command:
             - "cp /tmp/hadoop-config/. $HADOOP_HOME/etc/hadoop/"
-          volumes:
+
+        volumes:
             - name: hadoop-config
               configMap:
                 name: hadoop-hadoop
