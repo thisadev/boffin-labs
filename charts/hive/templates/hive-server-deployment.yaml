@@ -35,7 +35,8 @@ spec:
           mountPath: "/tmp/hadoop-config"
           readOnly: true
         command:
-            - "cp /tmp/hadoop-config/. $HADOOP_HOME/etc/hadoop/"
+            - "CONFIG_DIR='/tmp/hadoop-config'"
+            - "for f in slaves core-site.xml hdfs-site.xml mapred-site.xml yarn-site.xml; do if [[ -e ${CONFIG_DIR}/$f ]]; then cp ${CONFIG_DIR}/$f $HADOOP_HOME/etc/hadoop/$f else echo 'ERROR: Could not find $f in $CONFIG_DIR' exit 1"
         resources: {}
 
       restartPolicy: Always
