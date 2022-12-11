@@ -16,6 +16,9 @@ spec:
     - name: "10000"
       port: 10000
       targetPort: 10000
+    - name: "10002"
+      port: 10002
+      targetPort: 10002
   selector:
     io.kompose.service: hive-server
 status:
