@@ -29,6 +29,25 @@ spec:
           ports:
             - containerPort: 9083
             - containerPort: 10000
+            - containerPort: 10002
+          volumeMounts:
+            - name: hadoop-config
+              mountPath: "/tmp/hadoop-config"
+              readOnly: true
+          command:
+            - "for f in slaves core-site.xml hdfs-site.xml mapred-site.xml yarn-site.xml; do
+              if [[ -e ${/tmp/hadoop-config/$f ]]; then
+                cp /tmp/hadoop-config/$f $HADOOP_HOME/etc/hadoop/$f
+              else
+                echo "ERROR: Could not find $f in /tmp/hadoop-config"
+                exit 1
+              fi
+            done"
+          volumes:
+            - name: hadoop-config
+              configMap:
+                name: hadoop-hadoop
+
           resources: {}
       restartPolicy: Always
 status: {}
