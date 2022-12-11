@@ -33,10 +33,7 @@ spec:
         volumeMounts:
         - name: hadoop-config
           mountPath: /tmp/hadoop-config
-
-        command:
-        - "/bin/bash"
-
+          
         resources: {}
 
       restartPolicy: Always
