@@ -37,7 +37,8 @@ spec:
         command:
             - "cp /tmp/hadoop-config/. $HADOOP_HOME/etc/hadoop/"
         resources: {}
-        restartPolicy: Always
+
+      restartPolicy: Always
 
       volumes:
       - name: hadoop-config
