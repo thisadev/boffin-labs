@@ -32,11 +32,7 @@ spec:
         - containerPort: 10002
         volumeMounts:
         - name: hadoop-config
-          mountPath: /tmp/hadoop-config
-
-        command:
-        - "/bin/bash"
-        - "cp /tmp/hadoop-config/* $HADOOP_HOME/etc/hadoop"
+          mountPath: $HADOOP_HOME/etc/hadoop
 
         resources: {}
 
