@@ -32,7 +32,8 @@ spec:
         - containerPort: 10002
         volumeMounts:
         - name: hadoop-config
-          mountPath: $HADOOP_HOME/etc/hadoop
+          mountPath: /opt/hadoop-3.3.4/etc/hadoop/
+
 
         resources: {}
 
